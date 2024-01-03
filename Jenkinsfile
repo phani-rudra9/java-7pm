@@ -7,7 +7,7 @@ pipeline {
     stage('GitLeaks') {
       steps {
         sh '''
-           gitleaks detect --source . --log-opts "-n 1" --report-path=gitleaks_report.json
+           gitleaks detect --source . --log-opts "-n 1"  --report-format=csv  --report-path=gitleaks_report.csv
         '''
       }
     }
